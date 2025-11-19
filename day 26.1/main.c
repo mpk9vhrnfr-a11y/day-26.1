@@ -1,15 +1,23 @@
-//
-//  main.c
-//  day 26.1
-//
-//  Created by Sanaa Kumar on 19/11/25.
-//
-
-#include <stdlib.h>
 #include <stdio.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
-    return EXIT_SUCCESS;
+int main(void) {
+    int i, j, n = 3;
+
+    for(i = 1; i <= n; i++) {
+        for(j = i; j < n; j++)
+            printf(" ");
+        for(j = 1; j <= 2*i - 1; j++)
+            printf("*");
+        printf("\n");
+    }
+
+    for(i = n-1; i >= 1; i--) {
+        for(j = n; j > i; j--)
+            printf(" ");
+        for(j = 1; j <= 2*i - 1; j++)
+            printf("*");
+        printf("\n");
+    }
+
+    return 0;
 }
